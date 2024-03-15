@@ -14,6 +14,11 @@ class StuffsCollection {
     this.schema = new SimpleSchema({
       name: String,
       quantity: Number,
+      category: {
+        type: String,
+        allowedValues: ['Food', 'Sporting Goods', 'Electronics', 'Other'],
+        defaultValue: 'other',
+      },
       owner: String,
       condition: {
         type: String,

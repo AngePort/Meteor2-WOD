@@ -7,6 +7,7 @@ const StuffItem = ({ stuff }) => (
   <tr>
     <td>{stuff.name}</td>
     <td>{stuff.quantity}</td>
+    <td>{stuff.category}</td>
     <td>{stuff.condition}</td>
     <td>
       <Link to={`/edit/${stuff._id}`}>Edit</Link>
@@ -19,6 +20,7 @@ StuffItem.propTypes = {
   stuff: PropTypes.shape({
     name: PropTypes.string,
     quantity: PropTypes.number,
+    category: PropTypes.string,
     condition: PropTypes.string,
     _id: PropTypes.string,
   }).isRequired,
